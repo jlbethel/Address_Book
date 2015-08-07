@@ -15,6 +15,15 @@
              'twig.path' => __DIR__.'/../views'
     	));
 
+// Home Page with search form
 
 
+// Confirmation Page for adding a contact
+
+
+// Confirmation Page for deleting contacts
+
+
+
+    return $app;
 ?>
