@@ -16,7 +16,9 @@
     	));
 
 // Home Page with search form
-
+    $app->get("/", function() use ($app) {
+    	return $app['twig']->render('contacts.html.twig', array('contacts' => Contact::getALL()));
+    });
 
 // Confirmation Page for adding a contact
 
