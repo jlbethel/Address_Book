@@ -1,9 +1,9 @@
 <?php
     class Contact
     {
-        private $name
-        private $phone_number
-        private $address
+        private $name;
+        private $phone_number;
+        private $address;
 
         function __construct($name, $phone_number, $address)
         {
