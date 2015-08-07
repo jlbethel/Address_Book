@@ -21,6 +21,11 @@
     });
 
 // Confirmation Page for adding a contact
+    $app->post("/add_contacts", function() use ($app) {
+    	$contact = new Contact($_POST['name'], $_POST['phone_number'], $_POST['address']);
+    	$contact->save();
+    	return $app ['twig']->render('add_confirmation.html.twig', array('newcontact' => $contact));
+    });
 
 
 // Confirmation Page for deleting contacts
