@@ -1,11 +1,24 @@
 <html>
 <head>
-       <title>Address Book</title>
+    <title>Address Book</title>
 </head>
 <body>    
     <h1>Address Book</h1>
 
-    <form action='/add_contacts' method='post'>
+    {% if contacts is not empty %}
+        <p>Contacts stored in your address book:</p>
+        <ul>
+            {% for contact in contacts %}
+                <li>{{ contact.getName}}</li>
+                <li>{{ contact.getPhone_Number }}</li>
+                <li>{{ contact.getAddress }}</li>
+                <br>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    
+
+    <form action='/contacts' method='post'>
         <label for='name'>Enter contact's name: </label>
         <input id='name' name='name' type='text'>
 
@@ -17,17 +30,6 @@
 
         <button type='submit'>Add contact</button>
     </form>
-
-    {% if contacts is not empty %}
-        <p>Contacts stored in your Address Book:</p>
-        <ul>
-            {% for contact in contacts %}
-                <li> {{ contact.getName }}</li>
-                <li> {{ contact.getPhone_Number }}</li>
-                <li> {{ contact.getAddress }} </li>
-            {%  endfor %}
-        </ul>
-    {% endif %}
 
     <form action='/delete_contacts' method='post'>
         <button type='submit'>Delete Contacts</button>

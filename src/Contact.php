@@ -28,7 +28,7 @@
         }
 
         function getPhone_Number()
-        {
+        {          
         	return $this->phone_number;
         }
 
@@ -57,3 +57,4 @@
         	$_SESSION['list_of_contacts'] = array();
         }
     }
+    ?>
