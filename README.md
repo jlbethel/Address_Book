@@ -6,7 +6,7 @@
 
 ## Description
 
-This app allows the user to create an address book that will store the name, phone number, and address for each contact entered. The user will be able to clear the entire list if needed. Upon creating a new contact or clearing the addres book the user should be taken to a confirmation page.
+This app allows the user to create an address book that will store the name, phone number, and address for each contact entered. The user will be able to clear the entire list if needed. Upon creating a new contact or clearing the addres book the user will be taken to a confirmation page.
 
 ## Setup
 
