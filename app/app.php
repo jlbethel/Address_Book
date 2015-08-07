@@ -29,7 +29,10 @@
 
 
 // Confirmation Page for deleting contacts
-
+    $app->post("/delete_contacts", function() use ($app) {
+    	Task::deleteAll();
+    	return $app['twig']->render('delete_confirmation.html.twig');
+    });
 
 
     return $app;
